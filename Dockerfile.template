@@ -6,7 +6,7 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 # for instance if you need git, just uncomment the line below.
 # RUN install_packages git
 
-RUN install_packages python-dev python-rpi.gpio gcc
+RUN install_packages python-dev python-rpi.gpio gcc picap
 
 # Set our working directory
 WORKDIR /usr/src/app
@@ -16,6 +16,9 @@ COPY requirements.txt requirements.txt
 
 # pip install python deps from requirements.txt on the resin.io build server
 RUN pip install -r requirements.txt
+
+#picap setup
+RUN picap-setup
 
 # This will copy all files in our root to the working  directory in the container
 COPY . ./
