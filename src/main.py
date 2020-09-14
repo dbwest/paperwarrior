@@ -22,8 +22,10 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 @app.route('/')
+@app.route('/index')
 def hello_world():
-    return 'Hello World!'
+    user = {'username': 'Miguel'}
+    return render_template('index.html', title='Home', user=user)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
