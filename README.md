@@ -2,7 +2,9 @@
 
 Why? Run taskwarrior/tasksh with an eink interface to get a little more screen minimal and still GTD (get things done)
 
-Haven't seen the light on taskwarrior/tasksh yet? See [taskwarrior.org](https://taskwarrior.org)
+Haven't seen the light on taskwarrior/tasksh yet? See the following
+- [taskwarrior.org](https://taskwarrior.org)
+- [Taskwarrior, where have you been all my life?](https://blog.djy.io/taskwarrior-where-have-you-been-all-my-life/)
 
 BOM:
 - raspberry pi zero w with headers (~$30)
