@@ -11,7 +11,7 @@
 
 ### on startup
 
-You can just plug in a keyboard...
+You can just plug in a keyboard to get input, but then you have to...
 
 Currently this starts up in balenaOS, not the container that has tasksh (need to figure that out next)
 
