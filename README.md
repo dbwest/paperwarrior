@@ -6,7 +6,7 @@ Haven't seen the light on taskwarrior/tasksh yet? See the following
 - [taskwarrior.org](https://taskwarrior.org)
 - [Taskwarrior, where have you been all my life?](https://blog.djy.io/taskwarrior-where-have-you-been-all-my-life/)
 
-BOM:
+BOM (Bill of Materials):
 - raspberry pi zero w with headers (~$30)
 - waveshare v2 2.13" eink hat (~$25)
 - usb keyboard
@@ -17,10 +17,13 @@ BOM:
 2. Install balena cli using instructions on balena site
 3. login with balena cli using `balena login`
 4. from this directory `balena push paperwarrior --source .`
+  - project will build and you should see a unicorn
 5. add devices using balena dashboard for app
 6. burn microsds or appropriate media for all devices with balena etcher to deploy
 
 ### on startup
+
+After inserting burned media from the balena project and plugging the power in for the pi you will need to wait several minutes for balenaOS to start up and sync the application.
 
 You can just plug in a keyboard to get input, but then you have to...
 
