@@ -15,11 +15,10 @@ BOM (Bill of Materials):
 
 1. Make a new project in balena called 'paperwarrior'
 2. Install balena cli using instructions on balena site
-3. login with balena cli using `balena login`
-4. from this directory `balena push paperwarrior --source .`
-  - project will build and you should see a unicorn
-5. add devices using balena dashboard for app
-6. burn microsds or appropriate media for all devices with balena etcher to deploy
+3. Login with balena cli using `balena login`
+4. From this directory `balena push paperwarrior --source .` The project will build and you should see a unicorn
+5. Add devices using balena dashboard for app
+6. Burn microsds or appropriate media for all devices with balena etcher to deploy
 
 ### on startup
 
