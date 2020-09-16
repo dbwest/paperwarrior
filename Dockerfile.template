@@ -6,13 +6,16 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 # for instance if you need git, just uncomment the line below.
 # RUN install_packages git
 
-RUN install_packages python-dev gcc python3-smbus
+#RUN install_packages python-dev gcc python3-smbus
+RUN install_packages python-dev libjpeg8-dev zlib1g-dev gcc libopenjp2-7 libtiff5 taskwarrior tasksh
 
 # Set our working directory
 WORKDIR /usr/src/app
 
 # Copy requirements.txt first for better cache on later pushes
 COPY requirements.txt requirements.txt
+
+RUN python -m pip install --upgrade pip
 
 # pip install python deps from requirements.txt on the resin.io build server
 RUN pip install -r requirements.txt
@@ -24,4 +27,4 @@ COPY . ./
 ENV UDEV=1
 
 # main.py will run when container starts up on the device
-CMD ["python","-u","src/main.py"]
+CMD ["papertty","--driver","EPD2in13v2","--nopartial","terminal","--autofit"]
