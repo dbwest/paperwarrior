@@ -1,30 +1,17 @@
-## A Simple Server with Python Flask
+## paperwarrior -- a taskwarrior tasksh for raspberry pi with eink 
 
-This is a simple skeleton Flask server project that works on any of the devices supported by [balena][balena-link].
+1. Make a new project in balena called 'paperwarrior'
+2. Install balena cli using instructions on balena site
+3. login with balena cli using `balena login`
+4. from this directory `balena push paperwarrior --source .`
+5. add devices using balena dashboard for app
+6. burn microsds or appropriate media for all devices with balena etcher to deploy
 
-This project simply serves up `"Hello World!"` on port `:80` of your balena device.
+This is tested and made to work with raspberry pis and the waveshare 2 color 2.13" v2 eink hat
 
-To get this project up and running, you will need to signup for a balena account [here][signup-page] and set up a device, have a look at our [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally:
-```
-$ git clone git@github.com:balena-projects/simple-server-python.git
-```
-Then add your balena application's remote:
-```
-$ git remote add balena username@git.balena-cloud.com:username/myapp.git
-```
-and push the code to the newly added remote:
-```
-$ git push balena master
-```
-It should take a few minutes for the code to push. While you wait, lets enable device URLs so we can see the server outside of our local network. This option can be toggled on the device summary page, pictured below or in the `Actions` tab in your device dashboards.
+YMMV with other setups and you will likely need to change the CMD in the Dockerfile to use another driver if using another setup.
 
-![Enable device URL](/img/enable-public-URLs.png)
-
-Once the device is updated, you should see this in your logs:
-![log output](/img/log-output.png)
-
-Then in your browser you should be able to open the device URL and see the message "Hello World!".
-
+This project borrows heavily from the papertty Python library. Look at it (recommended). 
 
 [balena-link]:https://balena.io/
 [signup-page]:https://dashboard.balena-cloud.com/signup
