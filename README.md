@@ -1,5 +1,14 @@
 ## paperwarrior -- a taskwarrior tasksh for raspberry pi with eink 
 
+Why? Run taskwarrior/tasksh with an eink interface to get a little more screen minimal and still GTD (get things done)
+
+Haven't seen the light on taskwarrior/tasksh yet, see taskwarrior.org
+
+BOM:
+- raspberry pi zero w with headers (~$30)
+- waveshare v2 2.13" eink hat (~$25)
+- usb keyboard
+
 ![Picture](./assets/paperwarrior.jpg?raw=true)
 
 1. Make a new project in balena called 'paperwarrior'
